@@ -6,6 +6,7 @@ class Shape(object):
     Base class for all shapes.
     """
 
+
     def area(self):
         """
         Abstract method returning area of a shape.
@@ -24,3 +25,4 @@ class Shape(object):
             'area': self.area(),
             'perimeter': self.perimeter()
         }
+
