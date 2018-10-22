@@ -16,6 +16,10 @@ class Shape(object):
         """
         Abstract method returning shape perimeter.
         """
+    #def title(self):
+        """
+        Set title
+        """
 
     def summary(self):
         """
@@ -25,4 +29,9 @@ class Shape(object):
             'area': self.area(),
             'perimeter': self.perimeter()
         }
+
+
+
+
+
 

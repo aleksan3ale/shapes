@@ -1,11 +1,11 @@
 # coding: utf8
 from shape import Shape
+import matplotlib.pyplot as plt
+from numpy import *
+import numpy as np
 
 
 class Rectangle(Shape):
-    """
-    Rectangular shape.
-    """
 
     a = None
     b = None
@@ -16,19 +16,25 @@ class Rectangle(Shape):
         self.b = b
 
     def area(self):
-        return self.a * self.b
+        return round(self.a * self.b, 2)
 
     def perimeter(self):
         return 2 * (self.a + self.b)
 
+    def __str__(self):
+        return "Rectangle \n  sides: {0.a} x {0.b}".format(self)
+
+    def picture(self):
+        return plt.plot([0, self.b], [0, 0]), plt.plot([0, self.b], [self.a, self.a]), plt.plot([0, 0], [0, self.a]), plt.plot([self.b, self.b], [0, self.a])
+
 
 class Square(Rectangle):
-    """
-    Square shape as a specific rectangle.
-    """
 
     def __init__(self, a):
         super().__init__(a, a)
 
-        #repr - czytelnejszy obiekt dla programisty
-        #str - ładnie dla urzytkownika
+    def __str__(self):
+        return "Square \n  side: {0.a}".format(self)
+
+    def picture(self):
+        return plt.plot([0, self.a], [0, 0]), plt.plot([0, self.a], [self.a, self.a]), plt.plot([0, 0], [0, self.a]), plt.plot([self.a, self.a], [0, self.a])
