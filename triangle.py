@@ -1,6 +1,6 @@
 from shape import Shape
-import matplotlib.pyplot as plt
-from numpy import *
+#import matplotlib.pyplot as plt
+#from numpy import *
 import numpy as np
 
 class Triangle(Shape):
@@ -13,6 +13,7 @@ class Triangle(Shape):
         self.a = a
         self.b = b
         self._k = round(np.pi / 180 * k, 2)
+
 
     @property
     def angle(self):
@@ -27,5 +28,8 @@ class Triangle(Shape):
     def __str__(self):
         return "Triangle\n  sides: {0.a} x {0.b} angle: {0._k}".format(self)
 
+
+    """""
     def picture(self):
         return plt.plot([0,self.a * cos(self._k)], [0, self.a * sin(self._k)]), plt.plot([0, self.b], [0,0]), plt.plot([self.a * cos(self._k), self.b], [self.a * sin(self._k), 0])
+    """""

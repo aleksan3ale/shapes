@@ -26,12 +26,11 @@ class Shape(object):
         Return summary of a shape.
         """
         return {
-            'area': self.area(),
-            'perimeter': self.perimeter()
+            'area': repr(self.area()),
+            'perimeter': repr(self.perimeter())
         }
-
-
-
-
-
+        """""
+        'area': round(self.area(), 2),
+        'perimeter': round(self.perimeter(), 2)
+        """""
 

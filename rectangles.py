@@ -1,8 +1,8 @@
 # coding: utf8
 from shape import Shape
-import matplotlib.pyplot as plt
-from numpy import *
-import numpy as np
+#import matplotlib.pyplot as plt
+#from numpy import *
+
 
 
 class Rectangle(Shape):
@@ -24,9 +24,11 @@ class Rectangle(Shape):
     def __str__(self):
         return "Rectangle \n  sides: {0.a} x {0.b}".format(self)
 
+
+    """""
     def picture(self):
         return plt.plot([0, self.b], [0, 0]), plt.plot([0, self.b], [self.a, self.a]), plt.plot([0, 0], [0, self.a]), plt.plot([self.b, self.b], [0, self.a])
-
+    """""
 
 class Square(Rectangle):
 
@@ -36,5 +38,8 @@ class Square(Rectangle):
     def __str__(self):
         return "Square \n  side: {0.a}".format(self)
 
+
+    """""
     def picture(self):
         return plt.plot([0, self.a], [0, 0]), plt.plot([0, self.a], [self.a, self.a]), plt.plot([0, 0], [0, self.a]), plt.plot([self.a, self.a], [0, self.a])
+    """""

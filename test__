@@ -1,0 +1,18 @@
+from unittest import TestCase
+
+from rectangles import Rectangle
+from rectangles import Square
+from paralelogram import Parallelogram
+from paralelogram import Dimond
+from circle import Circle
+from triangle import Triangle
+
+class TestFraction(TestCase):
+
+    def test_area(self):
+        val = Rectangle(1, 2)
+        self.assertEqual(2, val)
+
+    def test_parameter(self):
+        val = Rectangle(1, 2)
+        self.assertEqual(6, val)
